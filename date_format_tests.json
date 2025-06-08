@@ -1,0 +1,30 @@
+[
+  {
+    "original": "12/12/07, 1510 hrs",
+    "formatted": "12/12/2007 03:10:00 PM"
+  },
+  {
+    "original": "01/01/23, 0830 hrs",
+    "formatted": "01/01/2023 08:30:00 AM"
+  },
+  {
+    "original": "31/12/22, 2359 hrs",
+    "formatted": "31/12/2022 11:59:00 PM"
+  },
+  {
+    "original": "15/06/2023, 1200 hrs",
+    "formatted": "15/06/2023 12:00:00 PM"
+  },
+  {
+    "original": "5/9/21, 130 hrs",
+    "formatted": "5/9/2021 01:30:00 AM"
+  },
+  {
+    "original": "10/10/10, 10 hrs",
+    "formatted": "10/10/2010 10:00:00 AM"
+  },
+  {
+    "original": "01/01/1999, 0001 hrs",
+    "formatted": "01/01/1999 12:01:00 AM"
+  }
+]

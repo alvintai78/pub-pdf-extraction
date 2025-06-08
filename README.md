@@ -82,7 +82,7 @@ The following entities are extracted from laboratory reports:
 2. **date**: The "Date" value
 3. **subject**: The full subject text
 4. **sample_reference**: The full sample reference description
-5. **sampling_date_time**: The date and time in brackets in the sample reference
+5. **sampling_date_time**: The date and time in brackets in the sample reference, formatted as "dd/mm/yyyy hh:mm:ss AM/PM"
 6. **sample_officer_incharge**: The person with Chemist job title
 7. **sampling_catchment**: The word in brackets at "Tested For" section
 8. **test_parameters**: List of test parameters

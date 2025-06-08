@@ -168,6 +168,11 @@ def extract_entities_from_text(text, client, deployment_name):
         import json
         try:
             entities = json.loads(content)
+            
+            # Format the date_time entity if present
+            if 'sampling_date_time' in entities:
+                entities['sampling_date_time'] = format_date_time(entities['sampling_date_time'])
+            
             return entities
         except json.JSONDecodeError:
             print("Error: Could not parse JSON response from OpenAI")
@@ -176,6 +181,66 @@ def extract_entities_from_text(text, client, deployment_name):
     except Exception as e:
         print(f"Error extracting entities: {str(e)}")
         return {"error": str(e)}
+
+def format_date_time(date_time_str):
+    """
+    Format a date-time string to dd/mm/yyyy hh:mm:ss AM/PM format
+    
+    Args:
+        date_time_str (str): The original date-time string from the document
+        
+    Returns:
+        str: Formatted date-time or the original string if formatting fails
+    """
+    import re
+    import datetime
+    
+    try:
+        # Example input: "12/12/07, 1510 hrs"
+        # Extract the date and time parts
+        match = re.search(r'(\d{1,2}/\d{1,2}/\d{2,4}),?\s*(\d{1,4})\s*hrs', date_time_str)
+        
+        if not match:
+            # Return the original if pattern doesn't match
+            return date_time_str
+        
+        date_part = match.group(1)
+        time_part = match.group(2)
+        
+        # Handle 2-digit year and convert to 4-digit year
+        if len(date_part.split('/')[-1]) == 2:
+            day, month, year_short = date_part.split('/')
+            # Assuming 20xx for years less than 50, 19xx for years 50+
+            year = f"20{year_short}" if int(year_short) < 50 else f"19{year_short}"
+            date_part = f"{day}/{month}/{year}"
+        
+        # Convert military time to 12-hour format
+        if len(time_part) <= 2:  # Hours only
+            hour = int(time_part)
+            minute = 0
+        else:  # Hours and minutes
+            if len(time_part) == 3:  # Format like "130" for 1:30
+                hour = int(time_part[0])
+                minute = int(time_part[1:])
+            else:  # Format like "1510" for 15:10
+                hour = int(time_part[:-2])
+                minute = int(time_part[-2:])
+        
+        # Determine AM or PM
+        am_pm = "AM" if hour < 12 else "PM"
+        # Convert 24-hour format to 12-hour format
+        if hour > 12:
+            hour -= 12
+        elif hour == 0:
+            hour = 12
+        
+        # Format the date and time in the required format
+        formatted_date_time = f"{date_part} {hour:02d}:{minute:02d}:00 {am_pm}"
+        return formatted_date_time
+        
+    except Exception as e:
+        print(f"Error formatting date-time: {str(e)}")
+        return date_time_str
 
 def main():
     """Main function to run the PDF extraction and processing"""
