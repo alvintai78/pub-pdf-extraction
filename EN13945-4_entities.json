@@ -1,0 +1,21 @@
+{
+  "our_reference": "EN13945/WPH/4",
+  "date": "19/12/2007",
+  "subject": "Analysis of water sample submitted by Public Utilities Board (Kim Chuan Water Reclamation Plant) on 12/12/2007 and testing commenced on 12/12/2007.",
+  "sample_reference": "One (01) water sample was received and labelled as : \"Analytical Laboratories (S) Pte Ltd No. 8 Kaki Bukit Place, S(416186) (12/12/07, 1510 hrs)\".",
+  "sampling_date_time": "12/12/07, 1510 hrs",
+  "sample_officer_incharge": "ANG CHUN HIONG",
+  "sampling_catchment": "Kim Chuan Water Reclamation Plant",
+  "test_parameters": [
+    "Chemical Oxygen Demand"
+  ],
+  "units": [
+    "mgO2/L"
+  ],
+  "test_methods": [
+    "APHA : Pt 5220B"
+  ],
+  "results": [
+    "69.3"
+  ]
+}

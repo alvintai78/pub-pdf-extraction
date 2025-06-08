@@ -74,7 +74,7 @@ def process_with_openai_agent(text):
         text (str): Extracted text from the PDF
         
     Returns:
-        dict: OpenAI API response
+        dict: OpenAI API response and extracted entities
     """
     print("Processing extracted text with Azure OpenAI...")
     
@@ -101,7 +101,81 @@ def process_with_openai_agent(text):
         max_tokens=1000
     )
     
-    return response
+    # Extract entities
+    entities = extract_entities_from_text(text, client, deployment_name)
+    
+    return {"summary_response": response, "extracted_entities": entities}
+
+def extract_entities_from_text(text, client, deployment_name):
+    """
+    Extract specific entities from the document text using Azure OpenAI.
+    
+    Args:
+        text (str): The extracted text from the PDF
+        client: The Azure OpenAI client
+        deployment_name (str): The name of the Azure OpenAI deployment
+        
+    Returns:
+        dict: Extracted entities
+    """
+    print("Extracting entities from text...")
+    
+    # Prepare prompt for entity extraction
+    system_message = """
+    You are an AI assistant specialized in extracting information from laboratory reports and documents.
+    Extract the exact values for the requested entities. If you cannot find a value, respond with "Not found".
+    Format your response as a JSON object with the following keys:
+    """
+    
+    user_message = f"""
+    Please extract the following entities from this laboratory report text:
+
+    1. our_reference: The "Our Ref" value
+    2. date: The "Date" value
+    3. subject: The full subject text
+    4. sample_reference: The full sample reference description
+    5. sampling_date_time: The date and time in brackets in the sample reference section (extract just the date/time)
+    6. sample_officer_incharge: The person at the bottom of the document with Chemist as the job title
+    7. sampling_catchment: The word in brackets at "Tested For" below "Public Utilities Board"
+    8. test_parameters: List of test parameters
+    9. units: List of units corresponding to test parameters
+    10. test_methods: List of test methods used
+    11. results: List of test results corresponding to test parameters
+    
+    Document text:
+    {text}
+    
+    Return only a valid JSON object with these keys, nothing else.
+    """
+    
+    try:
+        # Call Azure OpenAI API for entity extraction
+        response = client.chat.completions.create(
+            model=deployment_name,
+            messages=[
+                {"role": "system", "content": system_message},
+                {"role": "user", "content": user_message}
+            ],
+            temperature=0.1,  # Low temperature for more deterministic results
+            max_tokens=2000,
+            response_format={"type": "json_object"}
+        )
+        
+        # Extract content from response
+        content = response.choices[0].message.content
+        
+        # Convert to dictionary if it's a JSON string
+        import json
+        try:
+            entities = json.loads(content)
+            return entities
+        except json.JSONDecodeError:
+            print("Error: Could not parse JSON response from OpenAI")
+            return {"error": "Failed to parse JSON response", "raw_content": content}
+        
+    except Exception as e:
+        print(f"Error extracting entities: {str(e)}")
+        return {"error": str(e)}
 
 def main():
     """Main function to run the PDF extraction and processing"""
@@ -131,7 +205,20 @@ def main():
         
         # Print OpenAI response
         print("\nAzure OpenAI Analysis:")
-        print(response.choices[0].message.content)
+        print(response['summary_response'].choices[0].message.content)
+        
+        # Print extracted entities in a readable format
+        print("\nExtracted Entities:")
+        import json
+        entities = response['extracted_entities']
+        print(json.dumps(entities, indent=2))
+        
+        # Save extracted entities to a JSON file
+        entities_path = Path(pdf_path).stem + "_entities.json"
+        with open(entities_path, "w", encoding="utf-8") as f:
+            json.dump(entities, f, indent=2)
+            
+        print(f"\nExtracted entities saved to: {entities_path}")
         
     except Exception as e:
         print(f"Error: {str(e)}")
