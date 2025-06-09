@@ -1,6 +1,6 @@
 # PDF Text Extraction with Azure Document Intelligence and OpenAI
 
-This project extracts text from PDF documents using Azure Document Intelligence service and processes the extracted text using Azure OpenAI. It also extracts specific entities from laboratory reports.
+This project extracts text from PDF documents using Azure Document Intelligence service, processes the extracted text using Azure OpenAI, and generates formatted Excel reports from the extracted data.
 
 ## Prerequisites
 
@@ -12,18 +12,12 @@ This project extracts text from PDF documents using Azure Document Intelligence 
 
 1. Clone or download this repository
 
-2. Create and activate a virtual environment:
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate
-   ```
-
-3. Install the required dependencies:
+2. Install the required dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-4. Create a `.env` file based on `sample.env` and fill in your Azure API keys and endpoints:
+3. Create a `.env` file based on `sample.env` and fill in your Azure API keys and endpoints:
    ```
    # Azure OpenAI Configuration
    AZURE_OPENAI_API_KEY=your_azure_openai_api_key
@@ -37,55 +31,43 @@ This project extracts text from PDF documents using Azure Document Intelligence 
 
 ## Usage
 
-### Basic Text Extraction
-
 Run the script with the path to the PDF file you want to process:
 
 ```bash
-python pdf_extractor.py path/to/your/pdf_file.pdf
+python pdf_extractor.py path/to/your/pdf_file.pdf [--excel]
 ```
+
+Options:
+- `--excel`: Generate an Excel report from the extracted entities
 
 The script will:
 1. Extract text from the PDF using Azure Document Intelligence
 2. Save the extracted text to a file (e.g., `filename_extracted_text.txt`)
-3. Process the extracted text using Azure OpenAI
-4. Extract specific entities from the document
+3. Process the extracted text using Azure OpenAI to extract entities
+4. Save the extracted entities to a JSON file (e.g., `filename_entities.json`)
 5. Display a summary/analysis of the content
-6. Save extracted entities to a JSON file (e.g., `filename_entities.json`)
+6. If `--excel` is specified, generate a formatted Excel report (e.g., `filename_report.xlsx`)
 
-### Using Extracted Entities
+## Examples
 
-The `use_entities.py` utility script provides a way to display the extracted entities in a formatted report:
-
-```bash
-python use_entities.py filename_entities.json
-```
-
-## Example
-
+Basic extraction:
 ```bash
 python pdf_extractor.py /Users/alvintai/Downloads/PUB/EN13945-4.pdf
-python use_entities.py EN13945-4_entities.json
+```
+
+Extraction with Excel report generation:
+```bash
+python pdf_extractor.py /Users/alvintai/Downloads/PUB/EN13945-4.pdf --excel
+```
+
+You can also generate an Excel report separately from an existing entities JSON file:
+```bash
+python generate_excel_report.py filename_entities.json [output_filename.xlsx]
 ```
 
 ## Output Files
 
 - A text file containing the extracted text (e.g., `EN13945-4_extracted_text.txt`)
 - A JSON file containing the extracted entities (e.g., `EN13945-4_entities.json`)
+- If requested, an Excel report formatted according to the template (e.g., `EN13945-4_report.xlsx`)
 - A summary/analysis of the PDF content displayed in the terminal
-
-## Extracted Entities
-
-The following entities are extracted from laboratory reports:
-
-1. **our_reference**: The "Our Ref" value
-2. **date**: The "Date" value
-3. **subject**: The full subject text
-4. **sample_reference**: The full sample reference description
-5. **sampling_date_time**: The date and time in brackets in the sample reference, formatted as "dd/mm/yyyy hh:mm:ss AM/PM"
-6. **sample_officer_incharge**: The person with Chemist job title
-7. **sampling_catchment**: The word in brackets at "Tested For" section
-8. **test_parameters**: List of test parameters
-9. **units**: List of units corresponding to test parameters
-10. **test_methods**: List of test methods used
-11. **results**: List of test results
