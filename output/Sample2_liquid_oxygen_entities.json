@@ -1,0 +1,320 @@
+{
+  "our_ref": "LNOX/OXY/25/2007",
+  "company_name": "Leeden National Oxygen Ltd",
+  "lab_report_creation_date": "Not found",
+  "subject": "Liquid Oxygen",
+  "sample_reference": "10B 120525",
+  "names_and_designations": [
+    {
+      "name": "Jun wy",
+      "designation": "QA APPROVED"
+    },
+    {
+      "name": "Limuyt",
+      "designation": "QC PASSED"
+    }
+  ],
+  "expected_signatures": 2,
+  "actual_signatures": 3,
+  "is_there_signature": "Yes",
+  "results_comply": "No",
+  "test_results": [
+    {
+      "parameter": "Oxygen Content",
+      "unit": "% (w/w)",
+      "test_method": "Ph. Eur.",
+      "result": "99.9 % (w/w)",
+      "specification": "\u2265 99.6% (w/w)",
+      "pass_fail": "Pass"
+    },
+    {
+      "parameter": "Dew Point",
+      "unit": "\u2103",
+      "test_method": "Capacitance based (A1203)",
+      "result": "-50\u2103",
+      "specification": "<- 65 \u2103",
+      "pass_fail": "Fail"
+    },
+    {
+      "parameter": "Total Hydrocarbon (as Methane)",
+      "unit": "ppm (v/v)",
+      "test_method": "c",
+      "result": "12.39 ppm (v/v)",
+      "specification": "< 20.0 ppm (v/v)",
+      "pass_fail": "Pass"
+    }
+  ],
+  "signature_validation_details": {
+    "names_found": [
+      "Jun wy - QA APPROVED",
+      "Limuyt - QC PASSED"
+    ],
+    "signature_count_matches": false,
+    "validation_note": "Expected 2 signatures based on names/designations, found 3 signatures"
+  },
+  "signature_detection": {
+    "pdf_path": "Sample2_liquid_oxygen.pdf",
+    "total_images_detected": 2,
+    "embedded_images_found": 2,
+    "signatures_found": 3,
+    "signature_details": [
+      {
+        "signature_id": "sig_1",
+        "page_number": 1,
+        "classification": {
+          "is_signature": true,
+          "confidence": 0.95,
+          "signature_count": 4,
+          "full_signature_count": 3,
+          "reasoning": "The image contains multiple handwritten marks. Three of these marks are full signatures with flowing, cursive-like strokes and personal style, representing complete names or elaborate personal marks. One mark appears to be initials and does not qualify as a full signature. Stamps are also present but are not handwritten and are excluded from the count of full signatures.",
+          "signature_characteristics": [
+            "handwritten",
+            "flowing strokes",
+            "personal style",
+            "located near 'Name/Signature' labels"
+          ],
+          "individual_signatures": [
+            {
+              "position": "Bottom left, near 'Name/Signature' label",
+              "type": "full_signature",
+              "description": "Handwritten name 'Limuyt' with flowing strokes and personal style",
+              "characteristics": [
+                "handwritten",
+                "flowing strokes",
+                "complete name"
+              ]
+            },
+            {
+              "position": "Bottom right, near 'Name/Signature' label",
+              "type": "full_signature",
+              "description": "Handwritten name 'Jen Wy' with flowing strokes and personal style",
+              "characteristics": [
+                "handwritten",
+                "flowing strokes",
+                "complete name"
+              ]
+            },
+            {
+              "position": "Middle left, near 'Certified by' label",
+              "type": "full_signature",
+              "description": "Handwritten name with cursive-like strokes, possibly 'Wang'",
+              "characteristics": [
+                "handwritten",
+                "cursive-like strokes",
+                "complete name"
+              ]
+            },
+            {
+              "position": "Middle right, near 'Issued by' label",
+              "type": "initials",
+              "description": "Short handwritten mark 'Jun', likely initials",
+              "characteristics": [
+                "handwritten",
+                "short mark",
+                "not a complete name"
+              ]
+            }
+          ],
+          "alternative_classification": "If not signatures, these could be handwritten annotations or initials, but the flowing strokes and placement near 'Name/Signature' labels strongly suggest they are signatures.",
+          "image_info": {
+            "page_number": 1,
+            "image_index": 0,
+            "xref": 137,
+            "extension": "jpeg",
+            "size": 54827,
+            "image_data_size": 54827
+          },
+          "image_size_bytes": 54827
+        },
+        "confidence": 0.95,
+        "signature_index_in_image": 1,
+        "total_full_signatures_in_image": 3,
+        "total_marks_in_image": 4,
+        "image_source": "embedded",
+        "signature_type": "full_signature",
+        "individual_signature_info": {
+          "position": "Bottom left, near 'Name/Signature' label",
+          "type": "full_signature",
+          "description": "Handwritten name 'Limuyt' with flowing strokes and personal style",
+          "characteristics": [
+            "handwritten",
+            "flowing strokes",
+            "complete name"
+          ]
+        }
+      },
+      {
+        "signature_id": "sig_2",
+        "page_number": 1,
+        "classification": {
+          "is_signature": true,
+          "confidence": 0.95,
+          "signature_count": 4,
+          "full_signature_count": 3,
+          "reasoning": "The image contains multiple handwritten marks. Three of these marks are full signatures with flowing, cursive-like strokes and personal style, representing complete names or elaborate personal marks. One mark appears to be initials and does not qualify as a full signature. Stamps are also present but are not handwritten and are excluded from the count of full signatures.",
+          "signature_characteristics": [
+            "handwritten",
+            "flowing strokes",
+            "personal style",
+            "located near 'Name/Signature' labels"
+          ],
+          "individual_signatures": [
+            {
+              "position": "Bottom left, near 'Name/Signature' label",
+              "type": "full_signature",
+              "description": "Handwritten name 'Limuyt' with flowing strokes and personal style",
+              "characteristics": [
+                "handwritten",
+                "flowing strokes",
+                "complete name"
+              ]
+            },
+            {
+              "position": "Bottom right, near 'Name/Signature' label",
+              "type": "full_signature",
+              "description": "Handwritten name 'Jen Wy' with flowing strokes and personal style",
+              "characteristics": [
+                "handwritten",
+                "flowing strokes",
+                "complete name"
+              ]
+            },
+            {
+              "position": "Middle left, near 'Certified by' label",
+              "type": "full_signature",
+              "description": "Handwritten name with cursive-like strokes, possibly 'Wang'",
+              "characteristics": [
+                "handwritten",
+                "cursive-like strokes",
+                "complete name"
+              ]
+            },
+            {
+              "position": "Middle right, near 'Issued by' label",
+              "type": "initials",
+              "description": "Short handwritten mark 'Jun', likely initials",
+              "characteristics": [
+                "handwritten",
+                "short mark",
+                "not a complete name"
+              ]
+            }
+          ],
+          "alternative_classification": "If not signatures, these could be handwritten annotations or initials, but the flowing strokes and placement near 'Name/Signature' labels strongly suggest they are signatures.",
+          "image_info": {
+            "page_number": 1,
+            "image_index": 0,
+            "xref": 137,
+            "extension": "jpeg",
+            "size": 54827,
+            "image_data_size": 54827
+          },
+          "image_size_bytes": 54827
+        },
+        "confidence": 0.95,
+        "signature_index_in_image": 2,
+        "total_full_signatures_in_image": 3,
+        "total_marks_in_image": 4,
+        "image_source": "embedded",
+        "signature_type": "full_signature",
+        "individual_signature_info": {
+          "position": "Bottom right, near 'Name/Signature' label",
+          "type": "full_signature",
+          "description": "Handwritten name 'Jen Wy' with flowing strokes and personal style",
+          "characteristics": [
+            "handwritten",
+            "flowing strokes",
+            "complete name"
+          ]
+        }
+      },
+      {
+        "signature_id": "sig_3",
+        "page_number": 1,
+        "classification": {
+          "is_signature": true,
+          "confidence": 0.95,
+          "signature_count": 4,
+          "full_signature_count": 3,
+          "reasoning": "The image contains multiple handwritten marks. Three of these marks are full signatures with flowing, cursive-like strokes and personal style, representing complete names or elaborate personal marks. One mark appears to be initials and does not qualify as a full signature. Stamps are also present but are not handwritten and are excluded from the count of full signatures.",
+          "signature_characteristics": [
+            "handwritten",
+            "flowing strokes",
+            "personal style",
+            "located near 'Name/Signature' labels"
+          ],
+          "individual_signatures": [
+            {
+              "position": "Bottom left, near 'Name/Signature' label",
+              "type": "full_signature",
+              "description": "Handwritten name 'Limuyt' with flowing strokes and personal style",
+              "characteristics": [
+                "handwritten",
+                "flowing strokes",
+                "complete name"
+              ]
+            },
+            {
+              "position": "Bottom right, near 'Name/Signature' label",
+              "type": "full_signature",
+              "description": "Handwritten name 'Jen Wy' with flowing strokes and personal style",
+              "characteristics": [
+                "handwritten",
+                "flowing strokes",
+                "complete name"
+              ]
+            },
+            {
+              "position": "Middle left, near 'Certified by' label",
+              "type": "full_signature",
+              "description": "Handwritten name with cursive-like strokes, possibly 'Wang'",
+              "characteristics": [
+                "handwritten",
+                "cursive-like strokes",
+                "complete name"
+              ]
+            },
+            {
+              "position": "Middle right, near 'Issued by' label",
+              "type": "initials",
+              "description": "Short handwritten mark 'Jun', likely initials",
+              "characteristics": [
+                "handwritten",
+                "short mark",
+                "not a complete name"
+              ]
+            }
+          ],
+          "alternative_classification": "If not signatures, these could be handwritten annotations or initials, but the flowing strokes and placement near 'Name/Signature' labels strongly suggest they are signatures.",
+          "image_info": {
+            "page_number": 1,
+            "image_index": 0,
+            "xref": 137,
+            "extension": "jpeg",
+            "size": 54827,
+            "image_data_size": 54827
+          },
+          "image_size_bytes": 54827
+        },
+        "confidence": 0.95,
+        "signature_index_in_image": 3,
+        "total_full_signatures_in_image": 3,
+        "total_marks_in_image": 4,
+        "image_source": "embedded",
+        "signature_type": "full_signature",
+        "individual_signature_info": {
+          "position": "Middle left, near 'Certified by' label",
+          "type": "full_signature",
+          "description": "Handwritten name with cursive-like strokes, possibly 'Wang'",
+          "characteristics": [
+            "handwritten",
+            "cursive-like strokes",
+            "complete name"
+          ]
+        }
+      }
+    ],
+    "processing_errors": [],
+    "detection_method": "Azure Document Intelligence + Azure OpenAI"
+  }
+}

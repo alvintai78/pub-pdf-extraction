@@ -6,3 +6,5 @@ openpyxl
 streamlit
 pandas
 Pillow
+PyMuPDF
+requests

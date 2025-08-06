@@ -1,0 +1,401 @@
+{
+  "our_ref": "CE-8500317108/OYN",
+  "company_name": "Setsco Services Pte Ltd",
+  "lab_report_creation_date": "18/06/2024",
+  "subject": "Analysis on sample submitted by Chemical Industries (Far East) Limited on 10/06/2024 and test commenced on 11/06/2024.",
+  "sample_reference": "Low Bromide Salt 07062024T",
+  "names_and_designations": [
+    {
+      "name": "IRENE DI",
+      "designation": "SENIOR CHEMIST"
+    },
+    {
+      "name": "OOI YEN NEE",
+      "designation": "MANAGER"
+    }
+  ],
+  "expected_signatures": 2,
+  "actual_signatures": 2,
+  "is_there_signature": "Yes",
+  "results_comply": "Yes",
+  "test_results": [
+    {
+      "parameter": "Antimony",
+      "unit": "mg/kg",
+      "test_method": "ICP-MS",
+      "result": "<5",
+      "specification": "\u226420",
+      "pass_fail": "Pass"
+    },
+    {
+      "parameter": "Arsenic",
+      "unit": "mg/kg",
+      "test_method": "ICP-MS",
+      "result": "34.0",
+      "specification": "\u226433.3",
+      "pass_fail": "Fail"
+    },
+    {
+      "parameter": "Barium",
+      "unit": "mg/kg",
+      "test_method": "ICP-MS",
+      "result": "<5",
+      "specification": "\u22646666.7",
+      "pass_fail": "Pass"
+    },
+    {
+      "parameter": "Beryllium",
+      "unit": "mg/kg",
+      "test_method": "ICP-MS",
+      "result": "<10",
+      "specification": "\u226413.3",
+      "pass_fail": "Pass"
+    },
+    {
+      "parameter": "Cadmium",
+      "unit": "mg/kg",
+      "test_method": "ICP-MS",
+      "result": "<16.8",
+      "specification": "\u226416.7",
+      "pass_fail": "Fail"
+    },
+    {
+      "parameter": "Calcium",
+      "unit": "%w/w",
+      "test_method": "ICP-OES",
+      "result": "<0.1",
+      "specification": "\u22640.01",
+      "pass_fail": "Fail"
+    },
+    {
+      "parameter": "Chromium",
+      "unit": "mg/kg",
+      "test_method": "ICP-MS",
+      "result": "<5",
+      "specification": "\u2264333.3",
+      "pass_fail": "Pass"
+    },
+    {
+      "parameter": "Copper",
+      "unit": "mg/kg",
+      "test_method": "ICP-MS",
+      "result": "<2",
+      "specification": "\u22643",
+      "pass_fail": "Pass"
+    },
+    {
+      "parameter": "Lead",
+      "unit": "mg/kg",
+      "test_method": "ICP-MS",
+      "result": "<5",
+      "specification": "57",
+      "pass_fail": "Pass"
+    },
+    {
+      "parameter": "Mercury",
+      "unit": "mg/kg",
+      "test_method": "ICP-MS",
+      "result": "<5",
+      "specification": "\u22646.7",
+      "pass_fail": "Pass"
+    },
+    {
+      "parameter": "Selenium",
+      "unit": "mg/kg",
+      "test_method": "ICP-MS",
+      "result": "<10",
+      "specification": "\u2264166.7",
+      "pass_fail": "Pass"
+    },
+    {
+      "parameter": "Thallium",
+      "unit": "mg/kg",
+      "test_method": "ICP-MS",
+      "result": "<5",
+      "specification": "\u22646.7",
+      "pass_fail": "Pass"
+    },
+    {
+      "parameter": "Uranium",
+      "unit": "mg/kg",
+      "test_method": "ICP-OES",
+      "result": "<10",
+      "specification": "\u226466.7",
+      "pass_fail": "Pass"
+    },
+    {
+      "parameter": "Magnesium",
+      "unit": "%w/w",
+      "test_method": "ICP-OES",
+      "result": "<0.0005",
+      "specification": "\u22640.01",
+      "pass_fail": "Pass"
+    },
+    {
+      "parameter": "Iron",
+      "unit": "%w/w",
+      "test_method": "ICP-OES",
+      "result": "<0.0005",
+      "specification": "\u22640.0005",
+      "pass_fail": "Pass"
+    },
+    {
+      "parameter": "Manganese",
+      "unit": "%w/w",
+      "test_method": "ICP-MS",
+      "result": "<0.00002",
+      "specification": "\u22640.00002",
+      "pass_fail": "Pass"
+    },
+    {
+      "parameter": "Moisture",
+      "unit": "% w/w",
+      "test_method": "Gravimetric",
+      "result": "<0.2",
+      "specification": "\u22640.2",
+      "pass_fail": "Pass"
+    },
+    {
+      "parameter": "Water-insolubles Impurities",
+      "unit": "% w/w",
+      "test_method": "Gravimetric",
+      "result": "<0.005",
+      "specification": "\u22640.005",
+      "pass_fail": "Pass"
+    },
+    {
+      "parameter": "Dry Sodium Chloride (NaCl)",
+      "unit": "% w/w",
+      "test_method": "Titration",
+      "result": "80",
+      "specification": "\u226599.5",
+      "pass_fail": "Fail"
+    },
+    {
+      "parameter": "Bromide",
+      "unit": "mg/kg",
+      "test_method": "Ion Chromatography",
+      "result": "58",
+      "specification": "\u226454",
+      "pass_fail": "Fail"
+    },
+    {
+      "parameter": "Sulphate",
+      "unit": "%w/w",
+      "test_method": "Ion Chromatography",
+      "result": "0.017",
+      "specification": "\u22640.35",
+      "pass_fail": "Pass"
+    },
+    {
+      "parameter": "Magnesium Chloride",
+      "unit": "%w/w",
+      "test_method": "Calculation",
+      "result": "<0.05",
+      "specification": "\u22640.06",
+      "pass_fail": "Pass"
+    },
+    {
+      "parameter": "Magnesium Sulfate",
+      "unit": "%w/w",
+      "test_method": "Calculation",
+      "result": "<0.03",
+      "specification": "\u22640.02",
+      "pass_fail": "Fail"
+    },
+    {
+      "parameter": "Fluoride",
+      "unit": "%w/w",
+      "test_method": "Ion Chromatography",
+      "result": "<0.002",
+      "specification": "\u22640.002",
+      "pass_fail": "Pass"
+    },
+    {
+      "parameter": "Calcium Sulfate",
+      "unit": "%w/w",
+      "test_method": "Calculation",
+      "result": "0.14",
+      "specification": "\u22640.14",
+      "pass_fail": "Pass"
+    },
+    {
+      "parameter": "Total impurities (Soluble & insoluble)",
+      "unit": "",
+      "test_method": "Calculation",
+      "result": "0.004",
+      "specification": "\u22640.5",
+      "pass_fail": "Pass"
+    },
+    {
+      "parameter": "Grease, fat or oil",
+      "unit": "%w/w",
+      "test_method": "APHA 5520B",
+      "result": "<0.005",
+      "specification": "\u22640.01",
+      "pass_fail": "Pass"
+    },
+    {
+      "parameter": "pH of 5% salt solution",
+      "unit": "",
+      "test_method": "pH meter",
+      "result": "4.999",
+      "specification": "5 to 9.5",
+      "pass_fail": "Fail"
+    }
+  ],
+  "signature_validation_details": {
+    "names_found": [
+      "IRENE DI - SENIOR CHEMIST",
+      "OOI YEN NEE - MANAGER"
+    ],
+    "signature_count_matches": true,
+    "validation_note": "Expected 2 signatures based on names/designations, found 2 signatures"
+  },
+  "signature_detection": {
+    "pdf_path": "Sample1_low_bromide_salt.pdf",
+    "total_images_detected": 12,
+    "embedded_images_found": 12,
+    "signatures_found": 2,
+    "signature_details": [
+      {
+        "signature_id": "sig_1",
+        "page_number": 3,
+        "classification": {
+          "is_signature": true,
+          "confidence": 0.95,
+          "signature_count": 2,
+          "full_signature_count": 2,
+          "reasoning": "The image contains two distinct handwritten marks that exhibit characteristics of full signatures. Both marks are elaborate, flowing, and cursive-like, representing personal styles. They are located near printed names and titles, which is typical for signatures. No evidence suggests these are initials, marks, or stamps.",
+          "signature_characteristics": [
+            "flowing strokes",
+            "cursive-like",
+            "personal style",
+            "located near printed names"
+          ],
+          "individual_signatures": [
+            {
+              "position": "left side of the image, above the printed name 'TRINIE LII SENIOR CHEMIST'",
+              "type": "full_signature",
+              "description": "An elaborate, flowing handwritten mark with cursive-like strokes",
+              "characteristics": [
+                "flowing strokes",
+                "cursive-like",
+                "personal style",
+                "located near printed name"
+              ]
+            },
+            {
+              "position": "right side of the image, above the printed name 'OOI YEN NEE MANAGER'",
+              "type": "full_signature",
+              "description": "A flowing, cursive-like handwritten mark with a personal style",
+              "characteristics": [
+                "flowing strokes",
+                "cursive-like",
+                "personal style",
+                "located near printed name"
+              ]
+            }
+          ],
+          "alternative_classification": "If not signatures, these could potentially be decorative handwritten marks, but their placement and style strongly suggest they are signatures.",
+          "image_info": {
+            "page_number": 3,
+            "image_index": 0,
+            "xref": 15,
+            "extension": "png",
+            "size": 26045,
+            "image_data_size": 26045
+          },
+          "image_size_bytes": 26045
+        },
+        "confidence": 0.95,
+        "signature_index_in_image": 1,
+        "total_full_signatures_in_image": 2,
+        "total_marks_in_image": 2,
+        "image_source": "embedded",
+        "signature_type": "full_signature",
+        "individual_signature_info": {
+          "position": "left side of the image, above the printed name 'TRINIE LII SENIOR CHEMIST'",
+          "type": "full_signature",
+          "description": "An elaborate, flowing handwritten mark with cursive-like strokes",
+          "characteristics": [
+            "flowing strokes",
+            "cursive-like",
+            "personal style",
+            "located near printed name"
+          ]
+        }
+      },
+      {
+        "signature_id": "sig_2",
+        "page_number": 3,
+        "classification": {
+          "is_signature": true,
+          "confidence": 0.95,
+          "signature_count": 2,
+          "full_signature_count": 2,
+          "reasoning": "The image contains two distinct handwritten marks that exhibit characteristics of full signatures. Both marks are elaborate, flowing, and cursive-like, representing personal styles. They are located near printed names and titles, which is typical for signatures. No evidence suggests these are initials, marks, or stamps.",
+          "signature_characteristics": [
+            "flowing strokes",
+            "cursive-like",
+            "personal style",
+            "located near printed names"
+          ],
+          "individual_signatures": [
+            {
+              "position": "left side of the image, above the printed name 'TRINIE LII SENIOR CHEMIST'",
+              "type": "full_signature",
+              "description": "An elaborate, flowing handwritten mark with cursive-like strokes",
+              "characteristics": [
+                "flowing strokes",
+                "cursive-like",
+                "personal style",
+                "located near printed name"
+              ]
+            },
+            {
+              "position": "right side of the image, above the printed name 'OOI YEN NEE MANAGER'",
+              "type": "full_signature",
+              "description": "A flowing, cursive-like handwritten mark with a personal style",
+              "characteristics": [
+                "flowing strokes",
+                "cursive-like",
+                "personal style",
+                "located near printed name"
+              ]
+            }
+          ],
+          "alternative_classification": "If not signatures, these could potentially be decorative handwritten marks, but their placement and style strongly suggest they are signatures.",
+          "image_info": {
+            "page_number": 3,
+            "image_index": 0,
+            "xref": 15,
+            "extension": "png",
+            "size": 26045,
+            "image_data_size": 26045
+          },
+          "image_size_bytes": 26045
+        },
+        "confidence": 0.95,
+        "signature_index_in_image": 2,
+        "total_full_signatures_in_image": 2,
+        "total_marks_in_image": 2,
+        "image_source": "embedded",
+        "signature_type": "full_signature",
+        "individual_signature_info": {
+          "position": "right side of the image, above the printed name 'OOI YEN NEE MANAGER'",
+          "type": "full_signature",
+          "description": "A flowing, cursive-like handwritten mark with a personal style",
+          "characteristics": [
+            "flowing strokes",
+            "cursive-like",
+            "personal style",
+            "located near printed name"
+          ]
+        }
+      }
+    ],
+    "processing_errors": [],
+    "detection_method": "Azure Document Intelligence + Azure OpenAI"
+  }
+}
